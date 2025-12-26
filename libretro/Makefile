@@ -61,7 +61,7 @@ ifneq (,$(findstring unix,$(platform)))
    CC = gcc
    SHARED := -shared -z defs
    else
-   LIBS += -lz
+   LIBS += -lz -lc
    SHARED := -shared -Wl,--version-script=link.T -Wl,-z,defs
    endif
 
